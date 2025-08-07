@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QueueAre</title>
+</head>
+<body>
+    <h1>WiFi QR Code Generator</h1>
+    <form id="wifi-form">
+        <label for="ssid">SSID:</label>
+        <input type="text" id="ssid" name="ssid" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <label for="auth-type">Authentication Type:</label>
+        <select id="auth-type" name="auth-type">
+            <option value="WPA">WPA/WPA2</option>
+            <option value="WEP">WEP</option>
+            <option value="nopass">No Password</option>
+        </select><br><br>
+        <button type="submit">Generate QR Code</button>
+    </form>
+    <br>
+    <div id="qr-container" style="display: none;">
+        <canvas id="qr-canvas"></canvas>
+        <br>
+        <button id="save-qr">Save QR Code</button>
+    </div>
+    <script src="./renderer.js"></script>
+</body>
+</html>
